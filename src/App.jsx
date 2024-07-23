@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
 function App() {
+
+  var Component = "h3";
   return (
     <div className="App">
-      <h1>India</h1>
+      <div>India</div>
+      <Component>Edupoly</Component>
     </div>
   );
 }
-
 export default App;
