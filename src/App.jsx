@@ -5,6 +5,7 @@ import store from './store';
 import Counter from './Counter';
 import Todolist from './Todolist';
 function App() {
+  console.log("App Rendered")
   return (
     <Provider store={store}>
       <div className="border border-2 m-2 p-2">
