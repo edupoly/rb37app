@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+  console.log("App Rendered")
   return (
-    <div className="App">
-      <h1>India</h1>
+    <div>
+      <h1>APP</h1>
     </div>
   );
 }
