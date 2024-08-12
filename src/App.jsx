@@ -1,10 +1,41 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React,{useEffect, useRef} from 'react';
 
 function App() {
+  var [c,setC] = React.useState(0);
+  var trf = useRef();
+  useEffect(()=>{
+    return ()=>{
+      clearInterval(trf.current);
+    }
+  },[])
+  function pause(){
+    console.log('pause timer called')
+    clearInterval(trf.current);
+  }
+  function start(){
+    console.log('start timer called')
+    clearInterval(trf.current);
+    trf.current = setInterval(()=>{
+      console.log("setInterval Called")
+      setC((prev)=>{return prev+1})
+    },100)
+  }
+  function reset(){
+    console.log('reset timer called')
+    clearInterval(trf.current);
+    setC(0)
+  }
   return (
-    <div className="App">
-      <h1>India</h1>
+    <div className='d-flex justify-content-center align-items-center border border-2 vh-100'>
+      <div className="border border-2 m-2 p-2 w-50 text-center">
+        <h1>Counter:{c}</h1>
+        <button onClick={()=>{start()}} class="btn btn-success p-2 m-2">Start<i class="bi bi-play"></i></button>
+        <button onClick={()=>{pause()}} class="btn btn-info p-2 m-2">Pause<i class="bi bi-pause"></i></button>
+        <button onClick={()=>{reset()}} class="btn btn-danger p-2 m-2">Reset<i class="bi bi-arrow-clockwise"></i></button>
+
+      </div>
     </div>
   );
 }
