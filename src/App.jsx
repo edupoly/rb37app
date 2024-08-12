@@ -5,21 +5,21 @@ import React,{useEffect, useRef} from 'react';
 function App() {
   var [c,setC] = React.useState(0);
   var [active,setActive] = React.useState(false)
-  var trf = useRef();
+  var trf;
   useEffect(()=>{
     return ()=>{
-      clearInterval(trf.current);
+      clearInterval(trf);
     }
   },[])
   function pause(){
     console.log('pause timer called')
     setActive(pv=>!pv);
-    clearInterval(trf.current);
+    clearInterval(trf);
   }
   function start(){
     console.log('start timer called')
-    clearInterval(trf.current);
-    trf.current = setInterval(()=>{
+    clearInterval(trf);
+    trf = setInterval(()=>{
       console.log("setInterval Called")
       setC((prev)=>{return prev+1})
     },100)
@@ -27,7 +27,7 @@ function App() {
   }
   function reset(){
     console.log('reset timer called')
-    clearInterval(trf.current);
+    clearInterval(trf);
     setC(0)
     setActive(()=>false);
   }
