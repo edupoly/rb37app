@@ -4,26 +4,18 @@ import React,{useEffect, useRef} from 'react';
 
 function App() {
   var [c,setC] = React.useState(0);
-  var [active,setActive] = React.useState(false)
   var trf;
-  useEffect(()=>{
-    return ()=>{
-      clearInterval(trf);
-    }
-  },[])
   function pause(){
-    console.log('pause timer called')
-    setActive(pv=>!pv);
     clearInterval(trf);
   }
   function start(){
-    console.log('start timer called')
+
     clearInterval(trf);
     trf = setInterval(()=>{
       console.log("setInterval Called")
       setC((prev)=>{return prev+1})
     },100)
-    setActive(pv=>!pv);
+
   }
   function reset(){
     console.log('reset timer called')
