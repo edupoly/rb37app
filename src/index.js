@@ -6,11 +6,37 @@ import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import Posts from './features/posts/Posts';
+import AddPost from './features/posts/AddPost';
+import EditPost from './features/posts/EditPost';
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <App></App>,
+      children:[
+        {
+            path:"",
+            element:<Posts></Posts>
+        },
+        {
+            path:"/addPost",
+            element:<AddPost></AddPost>
+        },
+        {
+            path:"/editPost",
+            element:<EditPost></EditPost>
+        }
+      ]
+    },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-        <App />
+        <RouterProvider router={router}></RouterProvider>
     </Provider>
 );
 

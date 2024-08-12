@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "title": "How to Work with json-server",
+      "author": "typicode",
+      "id": 1
+    },
+    {
+      "title": "javascript details",
+      "author": "venky",
+      "id": 2
+    },
+    {
+      "title": "Fundamentals of ReactJS",
+      "author": "mahesh",
+      "id": 5
+    },
+    {
+      "title": "how to code js",
+      "author": "gauri",
+      "id": 6
+    },
+    {
+      "title": "can you do",
+      "author": "balku",
+      "id": 7
+    },
+    {
+      "title": "yes we can it",
+      "author": "vani",
+      "id": 8
+    },
+    {
+      "title": "ReactRouterDOM",
+      "author": "balu",
+      "id": 9
+    },
+    {
+      "title": "changing technologies",
+      "author": "vani",
+      "id": 10
+    },
+    {
+      "title": "tales of Puri",
+      "author": "charmi",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
