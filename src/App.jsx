@@ -34,7 +34,6 @@ function App() {
   return (
     <div className='d-flex justify-content-center align-items-center border border-2 vh-100'>
       <div className="border border-2 m-2 p-2 w-50 text-center">
-
         <h1>Counter:{c}</h1>
         {
          (c===0 || !active) && <button onClick={()=>{start()}} class="btn btn-success p-2 m-2">Start<i class="bi bi-play"></i></button>
