@@ -21,7 +21,6 @@ function App() {
     console.log('reset timer called')
     clearInterval(trf);
     setC(0)
-    setActive(()=>false);
   }
   return (
     <div className='d-flex justify-content-center align-items-center border border-2 vh-100'>
