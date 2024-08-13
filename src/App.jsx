@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 function App() {
  
   return (
-    <div className="border border-danger p-2 m-2">
+    <div className="text-center p-2 m-2 d-flex justify-content-center">
       <Todolist></Todolist>
     </div>
   );
