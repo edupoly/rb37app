@@ -1,25 +1,9 @@
 import React, { useState,useEffect, useCallback, useMemo } from 'react'
+import { useStorageState } from './customHooks'
 import Todo from './Todo'
 function Todolist() {
     var [newtodo,setNewtodo]=useState('')
-    var [todos,setTodos] = useState([
-        {
-            title:'buy vegetables',
-            price:100
-        },
-        {
-            title:'goto goa',
-            price:300
-        },
-        {
-            title:'create institute app',
-            price:200
-        },
-        {
-            title:'make toy car',
-            price:150
-        },
-    ])
+    var [todos,setTodos] = useStorageState([])
     useEffect(()=>{
         console.log("Todolist Component Rendered")
       })
