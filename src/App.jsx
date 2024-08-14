@@ -32,7 +32,13 @@ function App() {
     setActive(()=>false);
   }
   return (
-    <div className='d-flex justify-content-center align-items-center border border-2 vh-100'>
+    <>
+      
+    <div className='d-flex flex-column align-items-center border border-2 vh-100 py-5'>
+    <h1 className='btn btn-primary'><u>We learn the importance of following:</u></h1>
+    <h3>setter function call</h3>
+    <h3>Using refs for controlling timers</h3>
+    <h3>Clearing Intervals</h3>
       <div className="border border-2 m-2 p-2 w-50 text-center">
         <h1>Counter:{c}</h1>
         {
@@ -45,6 +51,8 @@ function App() {
 
       </div>
     </div>
+    </>
+
   );
 }
 
